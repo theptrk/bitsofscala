@@ -1,6 +1,6 @@
 # bitsofscala
 
-* option 1: use `scalac` to compile files and `scala` to run
+* (optional): use `scalac` to compile files and `scala` to run
 
 ## getting a new project running
 - [ ] get sbt
