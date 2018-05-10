@@ -11,3 +11,9 @@ install sbt with `brew install sbt@1` > `brew upgrade sbt`
 
 - [ ] run your app
 `sbt` > `run`
+
+## add to your gitignore
+```
+target/
+*.class
+```
