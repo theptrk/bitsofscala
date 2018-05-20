@@ -14,17 +14,21 @@ object RNG {
         }
     }
 
-    // ex: 6.1 (this is a silly exercise)
-    // Write a function to generate a Double between 0 and 1, not including 1. 
-    // Note: You can use Int.MaxValue to obtain the maximum positive integer 
-    // value, and you can use x.toDouble to convert an x: Int to a Double.
-
+    // ex: 6.1 
+    // Write a function that uses RNG.nextInt to generate a random integer 
+    // between 0 and Int.maxValue (inclusive). Make sure to handle the corner 
+    // case when nextInt returns Int.MinValue, which doesn’t have a non-negative 
+    // counterpart.
+    // 
+    // Note: the Int data type is a two's complement with the absolute value of
+    // Int.MinValue being 1 larger than Int.MaxValue. That means you should
+    // convert -1 to 0, -2 to 1 and Int.MinValue to Int.MaxValue
     def nonNegativeInt(rng: RNG): (Int, RNG) = {
         val (i, r) = rng.nextInt
         (if (i < 0) -(i + 1) else i, r)
     }
 
-    // ex: 6.2 (this is a silly exercise)
+    // ex: 6.2 
     // Write a function to generate a Double between 0 and 1, not including 1. 
     // Note: You can use Int.MaxValue to obtain the maximum positive integer 
     // value, and you can use x.toDouble to convert an x: Int to a Double.
